@@ -1,0 +1,51 @@
+select sum(amount) as total_billing
+from billing
+where charged_datetime>="2012-03-01"
+and charged_datetime<"2012-04-01";
+
+
+select concat(clients.first_name,clients.last_name) as clients,
+sum(billing.amount)
+from clients
+inner join billing
+on clients.client_id=billing.client_id
+where clients.client_id=2
+;
+
+select count(site_id) as number_of_websites,
+date_format(created_datetime, "%M") as month_created,
+date_format(created_datetime, "%Y") as year_created
+from sites
+where client_id=1
+group by month_created, year_created;
+
+
+select count(leads.leads_id) as number_leads,
+sites.domain_name as website_name,
+leads.registered_datetime
+from leads
+inner join sites
+on sites.site_id=leads.site_id
+where leads.registered_datetime>= "2011-01-01"
+and leads.registered_datetime<"2011-02-16"
+group by website_name, leads.registered_datetime;
+
+select concat(clients.first_name, " ",clients.last_name) as clients,
+count(leads.leads_id) as number_leads
+from clients
+left join sites
+on clients.client_id=sites.client_id
+inner join leads
+on leads.site_id=sites.site_id
+where clients.joined_datetime between "2011-01-01" and "2011-12-31"
+group by clients.client_id;
+
+
+select
+concat(clients.first_name," ", clients.last_name) as client_name,
+group_concat(sites.domain_name) as sites
+from clients
+inner join sites
+on clients.client_id=sites.client_id
+group by clients.client_id
+;

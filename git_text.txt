@@ -1,0 +1,17 @@
+cd desktop
+mkdir gittest
+cd gittest
+git init
+touch index.html
+touch style.css
+aboutme.txt
+git add .
+git commit -m "Updated about me"
+open aboutme.txt file and add text and save
+git add aboutme.txt
+git commit -m"Added favorite movie"
+git log
+git revert -n HEAD
+open aboutme.txt file and add text and save
+git add aboutme.txt
+git commit -m "changed movies"

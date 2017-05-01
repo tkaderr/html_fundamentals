@@ -1,0 +1,133 @@
+1) select  c.name, l.language, l.percentage
+from countries c
+inner join languages l
+on c.id=l.country_id
+where language ="Slovene";
+
+2)select c.name, count(cc.name) as number_of_cities
+from countries c
+inner join cities cc
+on cc.country_id=c.id
+group by c.name
+order by number_of_cities desc
+;
+
+3)select cc.name , cc.population
+from countries c
+inner join cities cc
+on cc.country_id = c.id
+where c.name="Mexico"
+and cc.population>500000
+order by cc.population desc
+;
+
+4)select c.name, l.language, l.percentage
+from countries c
+inner join languages l
+on c.id=l.country_id
+where l.percentage>.89
+order by l.percentage desc
+;
+
+5)select name, surface_area
+from countries c
+where surface_area <501
+and population>100000
+;
+
+6)select name, capital, life_expectancy
+from countries
+where government_form="Constitutional Monarchy"
+And capital>200
+and life_expectancy>75
+;
+
+7)select c.name, cc.name,district,cc.population
+from countries c
+inner join cities cc
+on c.id=cc.country_id
+where district = "Buenos Aires"
+and cc.population>500000
+;
+
+8)select  region, count(name) as number_of_countries
+from countries
+group by region
+order by number_of_countries desc
+;
+----------------------------
+
+--Intermediate
+
+1) select
+customer.first_name,
+customer.last_name,
+customer.email,
+address.address,
+address.address2,
+address.district,
+address.postal_code
+from customer
+inner join address
+on customer.address_id=address.address_id
+inner join city
+on city.city_id=address.city_id
+where city.city_id=312
+;
+
+2)
+select film.title,
+film.description,
+film.release_year,
+film.rating,
+film.special_features,
+category.name
+from film
+inner join film_category
+on film.film_id=film_category.film_id
+inner join category
+on category.category_id=film_category.category_id
+where category.category_id=5;
+
+3)
+select  actor.actor_id,
+actor.first_name,
+actor.last_name,
+film.title,
+film.description,
+film.release_year
+from actor
+inner join film_actor
+on actor.actor_id=film_actor.actor_id
+inner join film
+on film.film_id = film_actor.film_id
+where actor.actor_id= 5;
+
+
+4)select
+customer.store_id,
+city.city_id,
+customer.first_name,
+customer.last_name,
+customer.email,
+address.address
+from customer
+inner join address
+on customer.address_id=address.address_id
+inner join city
+on city.city_id=address.city_id
+where customer.store_id=1
+and city.city_id in (1,42,312,459);
+
+5)select
+film.title,
+film.description,
+film.release_year,
+film.rating,
+film.special_features
+from film
+inner join film_actor
+on film.film_id=film_actor.film_id
+where film_actor.actor_id=15
+And film.rating="G"
+ANd film.special_features like "%behind the scenes";

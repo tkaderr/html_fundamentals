@@ -1,0 +1,19 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+.pokespace{
+  display:inline-block;
+  width:900px;
+  vertical-align: top;
+}
+
+.pokedex{
+  display:inline-block;
+  border: 5px solid red;
+  padding: 100px;
+  height: 200px;
+  vertical-align: top;
+  position:fixed;
+}

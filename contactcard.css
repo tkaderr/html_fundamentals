@@ -1,0 +1,28 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+.container{
+  padding:50px;
+  background-color: red;
+  color:white;
+  border: 1px solid black;
+  width:100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.left{
+  display:inline-block;
+  vertical-align: top;
+}
+.cards{
+  display:inline-block;
+  vertical-align: top;
+
+}
+
+.desc{
+  display:none;
+}

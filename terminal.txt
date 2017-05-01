@@ -1,0 +1,8 @@
+cd desktop
+mkdir test
+cd test
+touch index.html
+touch style.css
+touch commands.txt
+cp index.html index_2.html
+rm style.css

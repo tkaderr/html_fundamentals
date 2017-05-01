@@ -1,0 +1,28 @@
+.wrapper{
+  background-color: rgba(217, 202, 157, 0.87);
+  text-align: center;
+  padding: 15px;
+}
+
+#special{
+  background-color: white;
+}
+
+
+.header{
+  display: inline-block;
+  text-align: center;
+}
+h1{
+  display:inline-block;
+}
+.blue_img{
+  border: 2px solid black;
+  background-color: blue;
+  padding: 20px;
+}
+.red_img{
+  border: 2px solid black;
+  background-color: red;
+  padding: 20px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>sortable ninja</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="sortableninja.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("#sortable").sortable({
+          revert: true
+        });
+
+        $("#sortable").draggable({
+          connectToSortable: "#sortable",
+          helper: "clone",
+          revert: "invalid"
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="sortable">
+      <li><img src="../cat/ninja0.png" alt="image here"></li>
+      <li><img src="../cat/ninja1.png" alt="image here"></li>
+      <li><img src="../cat/ninja2.png" alt="image here"></li>
+      <li><img src="../cat/ninja3.png" alt="image here"></li>
+      <li><img src="../cat/ninja4.png" alt="image here"></li>
+    </ul>
+  </body>
+</html>

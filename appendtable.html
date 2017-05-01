@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>append table</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+          $("form").submit(function(){
+          var firstname = $(".firstname").val();
+          var lastname = $(".lastname").val();
+          var email = $(".email").val();
+          var contact = $(".contact").val();
+          $("table > tbody:first").append("<tr><td>"+firstname+"</td><td>"+lastname+"</td><td>"+email+"</td><td>"+contact+"</td></tr>");
+
+          $(".firstname").val(" ");
+          $(".lastname").val(" ");
+          $(".email").val(" ");
+          $(".contact").val(" ");
+
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <form>
+      First Name <input class="firstname" type="text" name="first_name" value="">
+      Last Name <input class="lastname" type="text" name="last_name" value="">
+      Email <input class="email" type="text" name="email" value="">
+      Contact <input class="contact" type="text" name="contact" value="">
+      <input type="submit" value="Add Users">
+    </form>
+
+
+      <table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Contact</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- <td>Sample Name</td>
+            <td>an_email@gmail.com</td>
+            <td>555-5555</td> -->
+        </tr>
+    </tbody>
+</table>
+  </body>
+</html>

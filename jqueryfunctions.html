@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Test</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+      $(document).ready(function(){
+
+
+        $(".red").click(function(){
+            $("p").css("color","red");
+        });
+
+        $(".hiding").click(function(){
+            $("p").hide();
+        });
+
+        $(".showing").click(function(){
+            $("p").show();
+        });
+
+        $(".toggling").click(function(){
+          $("p").toggle();
+        });
+
+        $(".sliding").click(function(){
+          $(".images").slideToggle();
+        });
+
+      });
+    </script>
+  </head>
+
+  <body>
+<p>Hello World</p>
+<button class="red">Red Button</button><br>
+<button class="sliding">slide</button>
+<button class="toggling">toggle</button>
+<button class="hiding">hide paragraph</button>
+<button class="showing">show paragraph</button>
+<img class="images" src="../images/visionary.jpg" alt="Image here" width="100" height="100"/><br>
+<button type="button" name="button">Hidden Button</button><br>
+<button type="button" name="button">Append Button</button>
+
+
+  </body>
+</html>

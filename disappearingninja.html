@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+          // $("img").click(function(){
+          //   $(this).css({visibility:"hidden"});
+          // });
+          //
+          // $(".restore").click(function(){
+          //   $("img").css({visibility:"visible"});
+          // })
+          $("img").click(function(){
+            $(this).css({display:"none"});
+          });
+
+          $(".restore").click(function(){
+            $("img").css({display:"none"});
+          })
+
+          // $("img").click(function(){
+          //   $(this).css("display","none");
+          // });
+          //
+          // $(".restore").click(function(){
+          //   $("img").css({visibility:"visible"});
+          // })
+
+      });
+    </script>
+  </head>
+  <body>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <img src="../images/visionary.jpg" alt="image here" width="250" height="250"/>
+    <button class="restore">Restore</button>
+  </body>
+</html>

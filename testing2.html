@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+          $("form").submit(function(){
+              return false;
+          });
+
+      });
+
+    </script>
+  </head>
+  <body>
+    <form action="process.php" method="post">
+      First Name <input type="text" name="first_name" value="">
+      Last Name  <input type="text" name="last_name" value="">
+      Email <input type="text" name="email" value="">
+      <input type="submit" value="submit!">
+    </form>
+  </body>
+</html>
